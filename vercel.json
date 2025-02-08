@@ -1,0 +1,16 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "BACKEND/server.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "BACKEND/server.js"
+      }
+    ],
+    "buildCommand": "npm install --prefix BACKEND && npm install --prefix FRONTEND && npm run build --prefix FRONTEND"
+  }
